@@ -11,9 +11,9 @@ jobs:
       - name: second-step
         run: echo 'aabra kaa daabra'
       - name: print secret
-        run: echo $MALLIKSECRET
+        run: echo ${{secrets.MALLIKNONSECRET}}
       - name: print non secret
-        run: echo $MALLIKNONSECRET
+        run: echo ${{env.MALLIKNONSECRET}}
   my-job2:
     name: mallikjob
     runs-on: ubuntu-latest
